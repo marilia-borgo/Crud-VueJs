@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Materialize CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Fontawesome 6 CND-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <nav class="orange darken-2">
+        <div class="nav-wrapper"></div>
+      </nav>
+​
+      <div class="container">
+        <div class="section">
+          <!--   Icon Section   -->
+          <div class="row">
+            <!-- card de tarefa que repete para cada item do array -->
+            <div v-for="tarefa in tasks" class="card horizontal" :key="tarefa.id">
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>{{ tarefa.title }}</p>
+                  <span class="projeto">{{ tarefa.project }}</span>
+                </div>
+                <div class="card-action">
+                 
+                  <a @click="usuarioEdit"  href="tasksEdit.html"><i class="fa-solid fa-pen-to-square"></i></a>
+                  <a v-on:click.prevent="deleteTask(tarefa.id)"href=""><i class="fa-solid fa-trash-can"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="add">
+          <a
+            class="btn-floating btn-large waves-effect waves-light red"
+            href="tasksNew.html"
+            ><i class="fa-solid fa-plus"></i
+          ></a>
+        </div>
+      </div>
+​
+      <footer class="page-footer orange darken-3">
+        <div class="footer-copyright">
+          <div class="container">Marília aprendendo Vue - 2022</div>
+        </div>
+      </footer>
+    </div>
+    <!-- app -->
+​
+    <!-- Materialize JavaScript CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+​
+    <script src="./todo.js"></script>
+  </body>
+</html>
