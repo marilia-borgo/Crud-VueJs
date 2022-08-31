@@ -8,12 +8,32 @@ var app = new Vue({
       "dueTo": '',
       "project": '',
       "usuario": '',
-
+      isShow:false,
     },
  
   },
   methods: {
-    
+    showEdit(id){
+     let elemento =  this.tasks.map(element => {
+      if(element.id === id){
+        element.isShow = true
+        
+      }
+      })
+      
+      
+    },
+
+    updateTasks(id){
+      const requestOptions = {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(this.task)
+      };
+      fetch(`http://localhost:3000/tasks/${id}`, requestOptions)
+        .then(response => response.json())
+        .then(data => (this.updatedAt = data.updatedAt));
+    },
     getTasks() {
       fetch("http://localhost:3000/tasks")
         .then((response) => response.json())
@@ -44,11 +64,11 @@ var app = new Vue({
   },
   created() {
     
-    console.log("created");
+    // console.log("created");
     this.getTasks();
   },
   mounted() {
-    console.log("montend");
+    // console.log("montend");
 
  
   },
