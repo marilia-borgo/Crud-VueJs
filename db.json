@@ -2,9 +2,9 @@
   "tasks": [
     {
       "id": 1,
-      "title": "teste clara",
-      "dueTo": "Aug 22, 2022",
-      "project": "",
+      "title": "eita",
+      "dueTo": "May 21, 2022",
+      "project": "Estudos",
       "usuario": "",
       "isShow": false
     },
@@ -18,9 +18,9 @@
     },
     {
       "id": 11,
-      "title": "a vida é bela",
-      "dueTo": "May 29, 2022",
-      "project": "",
+      "title": "",
+      "dueTo": "",
+      "project": "Financeiro",
       "usuario": "",
       "isShow": false
     },

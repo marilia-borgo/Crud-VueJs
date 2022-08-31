@@ -14,9 +14,10 @@ var app = new Vue({
   },
   methods: {
     showEdit(id){
-     let elemento =  this.tasks.map(element => {
+    this.tasks.map(element => {
       if(element.id === id){
         element.isShow = true
+        this.task = element
         
       }
       })
@@ -38,7 +39,6 @@ var app = new Vue({
       fetch("http://localhost:3000/tasks")
         .then((response) => response.json())
         .then((tarefasJson) => {
-          console.log(tarefasJson);
           this.tasks = tarefasJson;
         });
     },

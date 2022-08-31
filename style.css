@@ -9,3 +9,34 @@
     display: block;
     margin-top: 46px;
 }
+p{
+    color: aliceblue;
+}
+
+span{
+    color: aliceblue;
+}
+
+i{
+    color: aliceblue;
+}
+html, * {
+    /** Não importa. Reseta os estilos **/
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background-color: #333333;
+  }
+  footer{
+   
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-wrapper{
+    z-index: -1;
+    color: #B71C1C;
+  }
