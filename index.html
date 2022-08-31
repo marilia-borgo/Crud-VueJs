@@ -20,7 +20,7 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   </head>
   <body>
     <div id="app">
@@ -45,14 +45,14 @@
                   <a v-on:click.prevent="deleteTask(tarefa.id)"href=""><i class="fa-solid fa-trash-can"></i></a>
                     <!-- formulario de alteração da task -->
                   
-                  <form action="" v-if="tarefa.isShow " >
+                  <form action="" v-if="tarefa.isShow" >
                     <div class="input-field col s12">
                       <input v-model="task.title" placeholder="Title" id="title" type="text" class="validate" required />
                       <label for="title">Title</label>
                     </div>
 
                     <div class="input-field col s12">
-                      <select v-model="task.project" id="project">
+                      <select v-model="task.project" id="project" class="select-index">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="Estudos">Estudos</option>
                         <option value="Financeiro">Financeiro</option>
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="input-field col s12">
-                      <input v-model="task.dueTo" type="text" class="datepicker" id="dueTo" />
+                      <input v-model="task.dueTo" type="text" id="dueTo" />
                       <label for="dueTo">Date due to</label>
                     </div>
 
@@ -86,7 +86,7 @@
       </div>
       <footer class="page-footer orange darken-3">
         <div class="footer-copyright">
-          <div class="container">Marília aprendendo Vue - 2022</div>
+          <div class="container">- 2022</div>
         </div>
       </footer>
     </div>

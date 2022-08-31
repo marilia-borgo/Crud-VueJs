@@ -4,3 +4,8 @@
 .card-tarefa{
     border: 1px solid #ccc;
 }
+
+.select-index{
+    display: block;
+    margin-top: 46px;
+}
